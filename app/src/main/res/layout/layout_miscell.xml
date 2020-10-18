@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mescell"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_sheet"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    app:behavior_peekHeight="40dp">
+
+
+    
+    <TextView
+        android:id="@+id/textMescell"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:gravity="center"
+        android:text="Miscellaneous"
+        android:textColor="@color/colorWhite"
+        android:textSize="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_margin="10dp">
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <View
+                android:id="@+id/viewColor1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_background_back"/>
+            <ImageView
+                android:id="@+id/imageColor1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_done"
+                app:tint="@color/colorWhite" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <View
+                android:id="@+id/viewColor2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_background_yellow"/>
+            <ImageView
+                android:id="@+id/imageColor2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="5dp"
+                app:tint="@color/colorWhite" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/dddd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <View
+                android:id="@+id/viewColor3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_background_red"/>
+            <ImageView
+                android:id="@+id/imageColor3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="5dp"
+                app:tint="@color/colorWhite" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <View
+                android:id="@+id/viewColor4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_background_green"/>
+            <ImageView
+                android:id="@+id/imageColor4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="5dp"
+                app:tint="@color/colorWhite" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <View
+                android:id="@+id/viewColor5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_background_white"/>
+            <ImageView
+                android:id="@+id/imageColor5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="5dp"
+                app:tint="@color/colorWhite" />
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick color"
+            android:fontFamily="@font/light"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chooseImage"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_image"
+            app:tint="@color/colorIcons" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Add Image"
+            android:fontFamily="@font/ubuntu_regular"
+            android:textColor="@color/colorIcons"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addUrl"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_url"
+            app:tint="@color/colorIcons" />
+
+        <TextView
+            android:id="@+id/chooseURL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Add Image"
+            android:fontFamily="@font/ubuntu_regular"
+            android:textColor="@color/colorIcons"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+</LinearLayout>

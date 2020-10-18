@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.CreateNoteActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/btnBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_back"
+                    android:background="@null"/>
+
+                <ImageButton
+                    android:id="@+id/btnSave"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:src="@drawable/ic_done"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/them"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp">
+
+                <EditText
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textSize="30sp"
+                    android:textColorHint="@color/colorTextHint"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:hint="Title"
+                    android:padding="3dp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@null"/>
+
+                <TextView
+                    android:id="@+id/date_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="15sp"
+                    android:textColorHint="@color/colorTextHint"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:hint="date"
+                    android:paddingStart="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_below="@+id/title"
+                    android:background="@null"/>
+
+                <ImageView
+                    android:id="@+id/cay"
+                    android:layout_width="4dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/date_title"
+                    android:background="@drawable/custome_line" />
+
+                <ImageView
+                    android:id="@+id/imageNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="15dp"
+                    android:visibility="gone"
+                    android:layout_below="@+id/content_title"/>
+                
+                <ImageView
+                    android:id="@+id/imageRemoveWebImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/background_delete"
+                    android:src="@drawable/ic_baseline_delete_24"
+                    app:tint="@color/colorWhite"
+                    android:visibility="gone"
+                    android:layout_below="@+id/imageNote"
+                    android:layout_centerHorizontal="true"/>
+                
+                <LinearLayout
+                    android:id="@+id/llPopup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:background="@null"
+                    android:layout_below="@+id/imageRemoveWebImage">
+                    <TextView
+                        android:id="@+id/tvWebUrl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autoLink="web"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:textSize="17sp"/>
+
+                    <ImageView
+                        android:id="@+id/imageRemoveWebURL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_delete_24"
+                        app:tint="@color/colorDelete" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/content_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/date_title"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@+id/cay"
+                    android:background="@null"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:hint="Content"
+                    android:padding="5dp"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorTextHint"
+                    android:textSize="20sp"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"/>
+
+                    <EditText
+                        android:layout_below="@+id/llPopup"
+                        android:id="@+id/real"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@null"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:hint="Writes something"
+                        android:padding="5dp"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorTextHint"
+                        android:textSize="20sp"
+                        android:minHeight="200dp"
+                        android:gravity="top"
+                        android:fillViewport="true"
+                        android:isScrollContainer="false"
+                        android:importantForAutofill="no"
+                        android:inputType="textMultiLine"/>
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        layout="@layout/layout_miscell" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
